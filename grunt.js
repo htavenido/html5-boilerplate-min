@@ -1,6 +1,15 @@
 module.exports = function(grunt) {
     var SRC_CSS = 'css', BUILD_CSS = 'css/';
     grunt.initConfig({
+        csslint: {
+            base_css: {
+                src: '',
+                rules: {
+                    'import': false,
+                    
+                }
+            }
+        },
         concat: {
             css: {
                 src: [SRC_CSS] + 'css/*.css',
@@ -15,4 +24,7 @@ module.exports = function(grunt) {
         }
     });
     grunt.loadNpmTasks('grunt-css');
+
+    // default task
+    grunt.registerTask('default', 'csslint concat cssmin');
 };
