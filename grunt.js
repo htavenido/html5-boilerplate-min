@@ -7,13 +7,13 @@ module.exports = function (grunt) {
         pkg: grunt.file.readJSON('package.json'),
         concat: {
             css: {
-                src: this.SRC_CSS + "*.css",
+                src: "css/src/*.css",
                 dest: "css/all.css"
             }
         },
         cssmin: {
             css: {
-                src: "<config:concat.css.dest>",
+                src: ["<config:concat.css.dest>"],
                 dest: "css/all-min.css"
             }
         },
