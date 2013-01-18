@@ -5,6 +5,8 @@ robust, and adaptable web apps or sites.
 
 Minimal setup for mock
 
+# For CSS:
 ## [grunt-css](https://github.com/jzaefferer/grunt-css)
 
-For css
+[note: grunt-css issue](https://github.com/jzaefferer/grunt-css/issues/18)
+

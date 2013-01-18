@@ -1,30 +1,33 @@
-module.exports = function(grunt) {
-    var SRC_CSS = 'css', BUILD_CSS = 'css/';
+/*global module:false*/
+module.exports = function (grunt) {
+    var SRC_CSS = "./css/src",
+        BUILD_CSS = "./css/";
+
     grunt.initConfig({
-        csslint: {
-            base_css: {
-                src: '',
-                rules: {
-                    'import': false,
-                    
-                }
-            }
-        },
+        pkg: grunt.file.readJSON('package.json'),
         concat: {
             css: {
-                src: [SRC_CSS] + 'css/*.css',
-                dest: BUILD_CSS + 'css/all.css'
+                src: "css/src/*.css",
+                dest: "css/all.css"
             }
         },
         cssmin: {
-            my_target: {
-                src: '<config:concat.css.dest>',
-                dest: BUILD_CSS + 'css/all.min.css'
+            css: {
+                src: "<config:concat.css.dest>",
+                dest: "css/all-min.css"
+            }
+        },
+        csslint: {
+            base_theme: {
+                src: "css/all-min.css",
+                rules: {
+                    "import": false,
+                    "overqualified-elements": 2
+                }
             }
         }
     });
-    grunt.loadNpmTasks('grunt-css');
 
-    // default task
-    grunt.registerTask('default', 'csslint concat cssmin');
+    grunt.loadNpmTasks("grunt-css");
+    grunt.registerTask("default", "concat cssmin csslint");
 };
