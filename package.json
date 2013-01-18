@@ -2,6 +2,7 @@
     "name": "mock", 
     "version": "0.0.1", 
     "dependencies": {
-        "grunt-css": "0.3.x"
+        "grunt-css": "0.3.x",
+        "grunt-contrib-sass": "0.2.0"
     }
 }
