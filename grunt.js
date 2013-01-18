@@ -19,7 +19,7 @@ module.exports = function (grunt) {
         },
         csslint: {
             base_theme: {
-                src: "css/all-min.css",
+                src: "css/all.min.css",
                 rules: {
                     "import": false,
                     "overqualified-elements": 2
