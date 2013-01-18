@@ -7,7 +7,7 @@ module.exports = function (grunt) {
         pkg: grunt.file.readJSON('package.json'),
         concat: {
             css: {
-                src: "css/src/*.css",
+                src: this.SRC_CSS + "*.css",
                 dest: "css/all.css"
             }
         },
@@ -25,9 +25,13 @@ module.exports = function (grunt) {
                     "overqualified-elements": 2
                 }
             }
+        },
+        watch: {
+            files: "css/src/*.css",
+            tasks: ["concat", "cssmin"]
         }
     });
 
     grunt.loadNpmTasks("grunt-css");
-    grunt.registerTask("default", "concat cssmin csslint");
+    grunt.registerTask("default", "concat cssmin");
 };
