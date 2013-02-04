@@ -10,3 +10,5 @@ Minimal setup for mock
 
 [note: grunt-css issue](https://github.com/jzaefferer/grunt-css/issues/18)
 
+Requires node 0.8.*
+
