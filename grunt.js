@@ -11,12 +11,6 @@ module.exports = function (grunt) {
                 dest: "css/all.css"
             }
         },
-        cssmin: {
-            css: {
-                src: ["<config:concat.css.dest>"],
-                dest: "css/all.min.css"
-            }
-        },
         csslint: {
             base_theme: {
                 src: "css/all.min.css",
@@ -33,5 +27,5 @@ module.exports = function (grunt) {
     });
 
     grunt.loadNpmTasks("grunt-css");
-    grunt.registerTask("default", "concat cssmin");
+    grunt.registerTask("default", "concat");
 };
