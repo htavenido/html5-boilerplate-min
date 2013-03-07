@@ -7,7 +7,7 @@ module.exports = function (grunt) {
         pkg: grunt.file.readJSON('package.json'),
         concat: {
             css: {
-                src: "css/src/*.css",
+                src: ["css/src/normalize.css",'css/src/main.css'],
                 dest: "css/all.css"
             }
         },
@@ -22,7 +22,7 @@ module.exports = function (grunt) {
         },
         watch: {
             files: "css/src/*.css",
-            tasks: ["concat", "cssmin"]
+            tasks: ["concat"]
         }
     });
 
