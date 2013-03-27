@@ -12,7 +12,7 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <link rel="stylesheet" href="css/all.css">
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script data-main="js/main.js" src="js/libs/require.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -26,6 +26,9 @@
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
+
+        <!-- add LiveReload -->
+        <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             var _gaq=[['_setAccount','UA-26184524-1'],['_trackPageview']];
